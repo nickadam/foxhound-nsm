@@ -85,9 +85,9 @@ apt-get update && apt-get -y install cmake make gcc g++ flex bison libpcap-dev l
 function install_geoip()
 {
 Info "Installing GEO-IP"
-	wget  http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz 
-	wget  http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz 
-	gunzip GeoLiteCity.dat.gz 
+	wget  https://files-cdn.liferay.com/mirrors/geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.xz 
+	wget  https://files-cdn.liferay.com/mirrors/geolite.maxmind.com/download/geoip/database/GeoLiteCityv6.dat.gz
+	gunzip GeoLiteCity.dat.xz 
 	gunzip GeoLiteCityv6.dat.gz 
 	mv GeoLiteCity* /usr/share/GeoIP/
 	ln -s /usr/share/GeoIP/GeoLiteCity.dat /usr/share/GeoIP/GeoIPCity.dat
